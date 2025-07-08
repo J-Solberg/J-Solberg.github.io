@@ -19,6 +19,10 @@ Include some information about your website
 
 ---
 
+Markdown cheatsheet: (https://github.com/zairahira/Markdown-cheatsheet)
+
+---
+
 Relative path to image
 
 ![alt text](images/headshot.jpg "a title")
