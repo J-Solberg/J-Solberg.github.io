@@ -1,1 +1,16 @@
 
+p {
+    color: red;
+    font-size: 3rem;
+    background-color: beige;
+    padding: .5rem;
+    text-align: center;
+
+    
+}
+
+
+p.different {
+    color: #442406;      /* Note that I've used a hex code here */
+    font-size: 1.5rem;
+}
