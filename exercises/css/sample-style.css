@@ -1,7 +1,7 @@
 
 p {
-    color: red;
-    font-size: 3rem;
+    color: #442406;      /* Note that I've used a hex code here */
+    font-size: 1.5rem;
     background-color: beige;
     padding: .5rem;
     text-align: center;
@@ -11,6 +11,6 @@ p {
 
 
 p.different {
-    color: #442406;      /* Note that I've used a hex code here */
-    font-size: 1.5rem;
+    color: red;
+    font-size: 3rem;
 }
