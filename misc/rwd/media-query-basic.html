@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query - itty bitty example</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+        
+        body {
+            border: 2px solid orange;
+        }
+            
+        header { 
+            background-color: blanchedalmond;
+        }
+
+        h2 {
+            font-family: Avenir, Arial, Helvetica, sans-serif;
+        }
+
+    @media screen and (min-width: 35rem) {
+
+        h2 {
+            font-family: "Lobster Two", Avenir, Arial, Helvetica, sans-serif;
+
+            color: red;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+    }
+
+    /* Go back to the Robbins reading on responsive web design (RWD) for more info about media queries */
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <header><h2>Heading 2</h2></header>
+
+    <main>
+
+        <section>
+        <p>Headshot</p>
+        </section>
+
+        <section>
+        <p>Bio info.</p>
+        </section>
+
+                <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel officia, inventore molestias autem voluptas earum sint ipsa aut ab reprehenderit corrupti aperiam labore corporis et quod enim qui placeat exercitationem.</p>
+        </section>
+        
+        
+    </main>
+    
+</body>
+
+</html>
