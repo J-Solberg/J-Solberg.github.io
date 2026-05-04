@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid boxes that wrap</title>
+    <style>
+        main { 
+            border: 2px black solid;
+            display: grid;
+            gap: .25rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+
+            min-width: 0;      /* override the default min-width: auto */
+            overflow-wrap: break-word;
+        
+            /* How this works: 
+
+            repeat: Rather than set defined rows and columns, we've told the browser to create repeating columns. The browser will add as many columns as will fit into the available container width.
+            
+            minmax: This lets us set a size range so that our columns can grow/shrink within minimum/maximum size parameters that we define: 
+
+            >>> min: The columns are to be at least 250px wide (or 100% of the container width if the available space is less than 250px). If the available width is narrower than 250px wide, then the 100% says to make the column take up the full width of the space.
+            
+            >>> max: The columns may grow no wider than 1fr (this lets with columns grow evenly beyond our 250px to divide and fill up any leftover space up evenly). [For example, let's say the container being displayed happens to be 625px wide. That's wide enough for 2 columns, but not wide enough for 3 columns. The 1fr lets the columns get a bit wider to fill up that space so there's not a weird gap. But if the browser was resized so that there was more space -- say, 800px, then there'd be room to make a 3rd column. And so on.]
+
+            */
+
+            /* height: 100vh;  This was here to give my example items height before I added my lorem ipsum */
+        }
+
+
+        section, aside, article {
+            background-color: palegoldenrod;
+            padding: 1rem;
+        }
+        
+
+    </style>
+</head>
+
+
+<body>
+
+    <main>
+        <section>Section: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum amet alias veniam. Vero minima minus delectus architecto cumque perferendis repellendus quasi iure eligendi! Cum enim, praesentium neque perferendis laborum excepturi.</section>
+
+        <aside>Aside: Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit numquam in fugit illo, eos labore iste, aliquam, rem reprehenderit voluptatibus dolore quo molestiae laborum veniam aspernatur quasi consequatur iusto consectetur!</aside>
+        
+        <article>Article: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi neque temporibus, non, sit sunt rerum nesciunt consequuntur odio pariatur veniam cumque obcaecati sint incidunt adipisci officiis quod ipsa sequi. Quod.</article>
+        
+        <article>Article: Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quidem, voluptatem voluptate harum asperiores accusamus! Quis qui delectus eveniet vero fuga alias. Sit laboriosam odit labore, unde tempora doloremque autem.</article>
+    </main>
+    
+</body>
+</html>
